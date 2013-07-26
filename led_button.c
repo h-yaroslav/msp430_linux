@@ -1,7 +1,7 @@
 /* Blink Red LED example
  *
  * Compile:
- *      msp430-gcc -Os -mmcu=msp430g2452 -o led_red.elf led_red.c
+ *      msp430-gcc -Os -mmcu=msp430g2452 -o led_button.elf led_button.c
  *
  *    where:
  *      -Os - optimize for size
@@ -9,7 +9,7 @@
  * Install:
  *      sudo mspdebug rf2500
  *      erase
- *      prog led_red.elf
+ *      prog led_button.elf
  *      run
  *
  * */
