@@ -27,7 +27,7 @@ void delay_ms(unsigned int ms){
     }
 }
 
-void main(void) {
+int main(void) {
     // Stop watchdog (WDT) timer. This line of code is needed at the beginning
     // of most MSP430 projects. This line of code turns off the watchdog timer,
     // which can reset the device after a certain period of time.
@@ -52,12 +52,12 @@ void main(void) {
     while(true) {
         for(i=0; i<255; i++){
             for(j=0; j<10; j++){
-                P1OUT ^= P6;
+                P1OUT ^= G_LED;
                 delay_ms(i);
-                P1OUT ^= P6;
-                P1OUT ^= P0;
+                P1OUT ^= G_LED;
+                P1OUT ^= R_LED;
                 delay_ms(255-i);
-                P1OUT ^= P0;
+                P1OUT ^= R_LED;
             }
         }
     }

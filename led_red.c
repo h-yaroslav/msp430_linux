@@ -26,7 +26,7 @@ void delay_ms(unsigned int ms){
     }
 }
 
-void main(void) {
+int main(void) {
     WDTCTL = WDTPW + WDTHOLD;
     P1DIR |= R_LED;
     P1OUT = R_LED;

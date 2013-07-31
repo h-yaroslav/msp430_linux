@@ -21,14 +21,14 @@
 //  Built with msp430-gcc, flash via mspdebug
 //******************************************************************************
 
-#include "signal.h"
+#include <legacymsp430.h>
 #include  <msp430g2452.h>
 
 volatile unsigned int clicks=0;
 volatile unsigned int ticks=0;
 volatile unsigned int outp=0x00;
 
-void main(void) {
+int main(void) {
     WDTCTL = WDTPW + WDTHOLD;                 // Stop WDT
     P1DIR |= 0x0f;                            // P1.0 output
     CCTL0 = CCIE;                             // CCR0 interrupt enabled
