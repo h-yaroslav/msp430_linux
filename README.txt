@@ -44,3 +44,12 @@ $ git status                    #змінені файли мають зміни
 $ git commit -m 'test commit'   #робимо коміт
 $ git pull origin master        #спочатку отримуємо зміни з репозиторію
 $ git push origin master        #тепер надсилаємо наші зміни
+
+User-related commands
+---------------------
+# Set new user
+git config --local user.name "hello"
+git config --local user.email "world@gmail.com"
+
+git config user.name # See current user
+git config --list    # See all variables
